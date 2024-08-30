@@ -81,23 +81,33 @@ header {
 
 /* Responsive adjustments for mobile */
 @media (max-width: 567px) {
+  /* First section adjustments for mobile */
   #shortnote {
-    padding: 60px 20px; /* Adjust padding for mobile */
+    padding: 40px 20px; /* Reduce padding for mobile */
   }
 
   #shortnote .content {
-    padding: 10px;
-    padding-bottom: 10px;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
   }
 
   #shortnote .left,
   #shortnote .right {
-    width: 100%;
+    width: 100%; /* Make both sections take full width */
   }
 
-  #shortnote .right {
-    margin-top: 20px;
+  #shortnote .right img {
+    width: 100%; /* Make the image fit the screen width */
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space between the image and content */
+    border-radius: 0; /* Remove border-radius for a cleaner look on mobile */
   }
+
+  #shortnote .left {
+    text-align: center; /* Center-align text for a balanced look */
+  }
+
 }
 
 /* Parallax Section */
@@ -276,7 +286,6 @@ audio {
 }
 
 /* Download Section */
-/* Download Section Header */
 .download-section p {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -355,6 +364,32 @@ audio {
     opacity: 1;
   }
 }
+
+@media (max-width: 567px) {
+  /* Adjust the font size and spacing for the download section text */
+  .download-section p {
+    font-size: 1.5rem; /* Reduce font size for mobile */
+    margin-bottom: 15px; /* Adjust margin for mobile */
+    text-align: center; /* Center-align text */
+  }
+
+  /* Adjust the download button for mobile screens */
+  .download-button {
+    width: 100%; /* Make the button full-width */
+    padding: 12px 20px; /* Adjust padding for mobile */
+    font-size: 1rem; /* Reduce font size */
+    text-align: center; /* Center-align text */
+    margin-top: 15px; /* Add margin-top for spacing */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+
+  .download-button .indicator {
+    right: 10px; /* Adjust the position of the indicator */
+    width: 20px; /* Reduce the size of the indicator */
+    height: 20px; /* Reduce the size of the indicator */
+  }
+}
+
 
 /* Email Section */
 .email-section h2 {
