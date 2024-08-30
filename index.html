@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
+            <script type="text/javascript">
+              (function() {
+              emailjs.init("mkuTkKvODoX7MOR18");
+              })(); 
+    </script>
+
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <h1>My Thoughts❤️</h1>
+    </header>
+
+    <!-- Body Section -->
+    <section id="shortnote">
+      <div class="container">
+        <div class="content">
+          <div class="left">
+            <h2>Hi MINI MOLU😉</h2>
+            <p>
+              എന്നാ അമ്മukutty,സൈറ്റ് തുറക്കുമ്പോൾ നിന്റെ ചിത്രം അനീക്ഷിതമായി കാണാം എന്നത് ആശ്ചര്യപ്പെടുത്തും. ആ ഞെട്ടലിന് നീ പണ്ട് എങ്കിൽ നന്ദിയുണ്ടാകും എന്ന് ഞാൻ പ്രതീക്ഷിക്കുന്നു. എനിക്ക് 
+              എങ്ങനെ ഇമ്പ്രസ് ചെയ്യാമെന്ന് അറിയില്ല, എങ്കിലും ഇത് നിനക്ക് ഇഷ്ടപ്പെടും എന്നു ഞാൻ വിശ്വസിക്കുന്നു 
+              സൈറ്റ് സ്ക്രോൾ ചെയ്യുമ്പോൾ ഇഷ്ടം എടുക്കൂ. മുന്നോട്ട് പോയി ആശ്ചര്യപ്പെടൂ! <br>
+               (😅Sorry for if any sentences formation mistake)
+            </p>
+          </div>
+          <div class="right">
+            <img src="assets/mini.jpg" alt="Photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parallax section -->
+    <section id="parallax">
+      <div class="container">
+        <div class="parallax-image image1"></div>
+        <div class="parallax-image image2"></div>
+        <div class="parallax-image image3"></div>
+        <div class="parallax-image image4"></div>
+        <div class="parallax-image image5"></div>
+        <div class="parallax-image image6"></div>
+      </div>
+    </section>
+
+    <!-- Music area -->
+    <section id="new-section">
+      <div class="container">
+        <h2>പൂർണ്ണ ഗാനം കേൾക്കൂ🤞</h2>
+        <p>
+          ഈ ഘട്ടത്തിൽ ഞാൻ നിങ്ങളെ ആസ്വാദനാക്കിയിട്ടുണ്ടെന്ന് ഞാൻ വിശ്വസിക്കുന്നില്ല. നിങ്ങൾ എങ്കിൽ മറുപടി അറിയിക്കൂ നമുക്ക് കൂടിക്കാഴ്ചയ്ക്ക് ശേഷം.
+        </p>
+      </div>
+    </section>
+
+    <!-- Music area -->
+    <!-- Audio Player Section -->
+    <section id="audio-player">
+      <div class="container">
+        <div class="audio-player-wrapper">
+          <h2>Head Set Must 🎶</h2>
+          <div class="audio-player">
+            <audio controls>
+              <source src="assets/Enna Nadanthalum.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final section -->
+     <!-- Document Section -->
+  <section id="document">
+    <div class="document-content">
+      <!-- Download Section -->
+      <div class="download-section">
+        <p>ഇത് ഡൗൺലോഡ് ചെയ്യാൻ മറക്കരുത്, ഇതിൽ ഒരു രഹസ്യം ഉണ്ട്..</p>
+        <a href="assets/My_words.pdf" class="download-button" download>
+          Download PDF
+          <div class="indicator"></div>
+        </a>
+      </div>
+      <!-- Email Section -->
+      <div class="email-section">
+        <h2>After read all stuff just send mail or you call me</h2>
+        <form id="emailForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button onclick="sendEmail()" type="button">Send Email</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+    <!-- Include Rellax.js before your custom script -->
+    <script>
+      function sendEmail(){
+          var email=document.getElementById("email").value;
+          var from_name=document.getElementById("name").value;
+          var message=document.getElementById("message").value;
+
+          var templateParams = {
+                email: email,
+                to_name: name,
+                message: message
+              };
+
+              emailjs.send('service_ad5n9r6', 'template_bqxv36h', templateParams)
+          .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            window.alert("Sent successfully!");
+            
+          })  
+      }
+    </script>
+  </body>
+</html>

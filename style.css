@@ -1,0 +1,454 @@
+/* General Reset */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("assets/bg.svg");
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: sticky;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background: linear-gradient(
+    135deg,
+    #ffce30,
+    #e83845,
+    #e389b9,
+    #d9986a,
+    #f0d971
+  ); /* Gradient from coral to light orange */
+  -webkit-background-clip: text; /* Clips background to text */
+  -webkit-text-fill-color: transparent; /* Makes text color transparent to show gradient */
+  background-clip: text; /* Clips background to text (standard syntax) */
+  color: transparent; /* Ensures text color is transparent for gradient effect */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds subtle shadow for better readability */
+}
+
+/* First section */
+#shortnote {
+  padding: 80px 40px; /* Adjust padding for desktop */
+}
+
+#shortnote .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+#shortnote .left {
+  width: 50%;
+}
+
+#shortnote .left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: antiquewhite;
+}
+
+#shortnote .left p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: antiquewhite;
+}
+
+#shortnote .right {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+#shortnote .right img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow around the image */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 567px) {
+  #shortnote {
+    padding: 60px 20px; /* Adjust padding for mobile */
+  }
+
+  #shortnote .content {
+    padding: 10px;
+    padding-bottom: 10px;
+  }
+
+  #shortnote .left,
+  #shortnote .right {
+    width: 100%;
+  }
+
+  #shortnote .right {
+    margin-top: 20px;
+  }
+}
+
+/* Parallax Section */
+#parallax {
+  height: 600vh; /* Ensure enough scroll space for six images */
+  position: relative;
+  padding: 0 40px; /* Add padding for desktop */
+}
+
+.parallax-image {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Individual parallax images */
+.image1 {
+  background-image: url("assets/1_img.jpg");
+}
+
+.image2 {
+  background-image: url("assets/2_img.jpg");
+}
+
+.image3 {
+  background-image: url("assets/3_img.jpg");
+}
+.image4 {
+  background-image: url("assets/4_img.jpg");
+}
+.image5 {
+  background-image: url("assets/5_img.jpg");
+}
+.image6 {
+  background-image: url("assets/6_img.jpg");
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 567px) {
+  #parallax {
+    height: auto; /* Adjust height to auto to avoid excessive scrolling */
+    padding: 0 20px; /* Reduce padding for mobile */
+  }
+
+  .parallax-image {
+    height: 50vh; /* Reduce height to fit better on small screens */
+    background-size: contain; /* Ensure the image fits without being cut off */
+    border-radius: 10px;
+  }
+
+  /* Adjustments to images */
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6 {
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
+}
+
+/* New Section Styles */
+#new-section {
+  padding: 60px 40px; /* Adjust padding for desktop */
+  text-align: center;
+}
+
+#new-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff; /* Text color */
+}
+
+#new-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  background: linear-gradient(
+    135deg,
+    #ffce30,
+    #e83845,
+    #e389b9,
+    #d9986a,
+    #f0d971
+  ); /* Gradient from coral to light orange */
+  -webkit-background-clip: text; /* Clips background to text */
+  -webkit-text-fill-color: transparent; /* Makes text color transparent to show gradient */
+  background-clip: text; /* Clips background to text (standard syntax) */
+  color: transparent; /* Ensures text color is transparent for gradient effect */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds subtle shadow for better readability */
+}
+
+@media (max-width: 567px) {
+  #new-section {
+    padding: 40px 20px; /* Adjust padding for mobile */
+  }
+
+  #new-section h2 {
+    font-size: 1.5rem;
+  }
+
+  #new-section p {
+    font-size: 1rem;
+  }
+}
+/* Audio Player Section */
+#audio-player {
+  padding: 60px 40px; /* Adjust padding for desktop */
+  text-align: center;
+}
+
+#audio-player h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(
+    135deg,
+    #e06479,
+    #c2d577
+  ); /* Gradient from coral to light orange */
+  -webkit-background-clip: text; /* Clips background to text */
+  -webkit-text-fill-color: transparent; /* Makes text color transparent to show gradient */
+  background-clip: text; /* Clips background to text (standard syntax) */
+  color: transparent; /* Ensures text color is transparent for gradient effect */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds subtle shadow for better readability  */
+}
+
+.audio-player-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.audio-player {
+  margin-top: 20px;
+}
+
+audio {
+  width: 100%; /* Make the player full-width */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 567px) {
+  #audio-player {
+    padding: 40px 20px; /* Adjust padding for mobile */
+  }
+
+  #audio-player h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Document Section rgba(223, 221, 221, 0.263) */
+/* Document Section */
+#document {
+  padding: 60px 40px; /* Adjust padding for desktop */
+  background-color: rgba(223, 221, 221, 0.263); /* Light background color */
+}
+
+.document-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.download-section,
+.email-section {
+  width: 48%;
+}
+
+/* Download Section */
+/* Download Section Header */
+.download-section p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(
+    135deg,
+    #e06479,
+    #c2d577
+  ); /* Gradient from coral to light orange */
+  -webkit-background-clip: text; /* Clips background to text */
+  -webkit-text-fill-color: transparent; /* Makes text color transparent to show gradient */
+  background-clip: text; /* Clips background to text (standard syntax) */
+  color: transparent; /* Ensures text color is transparent for gradient effect */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds subtle shadow for better readability */
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    #1db954,
+    #1ed760
+  ); /* Gradient from Spotify green to lighter green */
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.download-button:hover {
+  background: linear-gradient(
+    135deg,
+    #1ed760,
+    #1db954
+  ); /* Reverse gradient on hover */
+  transform: scale(1.05);
+}
+
+.download-button:active {
+  background: linear-gradient(
+    135deg,
+    #1a9b48,
+    #1db954
+  ); /* Darker gradient when clicked */
+}
+
+.download-button .indicator {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  background: url("arrow-icon.png") no-repeat center center;
+  background-size: contain;
+  animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Email Section */
+.email-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(
+    135deg,
+    #e06479,
+    #c2d577
+  ); /* Gradient from coral to light orange */
+  -webkit-background-clip: text; /* Clips background to text */
+  -webkit-text-fill-color: transparent; /* Makes text color transparent to show gradient */
+  background-clip: text; /* Clips background to text (standard syntax) */
+  color: transparent; /* Ensures text color is transparent for gradient effect */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds subtle shadow for better readability */
+}
+
+.email-section form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.email-section label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.email-section input,
+.email-section textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s;
+}
+
+.email-section input:focus,
+.email-section textarea:focus {
+  border-color: #1db954; /* Highlight border color on focus */
+  outline: none;
+}
+
+.email-section button {
+  background: linear-gradient(
+    135deg,
+    #1db954,
+    #1ed760
+  ); /* Gradient from Spotify green to lighter green */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.email-section button:hover {
+  background: linear-gradient(
+    135deg,
+    #1ed760,
+    #1db954
+  ); /* Reverse gradient on hover */
+  transform: scale(1.05);
+}
+
+.email-section button:active {
+  background: linear-gradient(
+    135deg,
+    #1a9b48,
+    #1db954
+  ); /* Darker gradient when clicked */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 567px) {
+  .document-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-section,
+  .email-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .download-button {
+    width: 100%;
+    text-align: center;
+  }
+}

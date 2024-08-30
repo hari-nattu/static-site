@@ -1,0 +1,61 @@
+#parallax {
+  height: 300vh; /* Ensure enough scroll space */
+  position: relative;
+  padding: 0 40px; /* Add padding for desktop */
+}
+
+.parallax-image {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* Individual parallax images */
+.image1 {
+  background-image: url("assets/1_img.jpg");
+}
+
+.image2 {
+  background-image: url("assets/2_img.jpg");
+}
+
+.image3 {
+  background-image: url("assets/3_img.jpg");
+}
+.image4 {
+  background-image: url("assets/4_img.jpg");
+}
+.image5 {
+  background-image: url("assets/5_img.jpg");
+}
+.image6 {
+  background-image: url("assets/6_img.jpg");
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 567px) {
+  #parallax {
+    height: auto; /* Adjust height to auto to avoid excessive scrolling */
+    padding: 0 20px; /* Reduce padding for mobile */
+  }
+
+  .parallax-image {
+    height: 50vh; /* Reduce height to fit better on small screens */
+    background-size: contain; /* Ensure the image fits without being cut off */
+    border-radius: 10px;
+  }
+
+  /* Adjustments to images */
+  .image1,
+  .image2,
+  .image3,
+  .image4 .image5 .image6 {
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
+} 
+
