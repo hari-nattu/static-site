@@ -80,7 +80,7 @@ header {
 }
 
 /* Responsive adjustments for mobile */
-@media (max-width: 567px) {
+@media (max-width: 570px) {
   /* First section adjustments for mobile */
   #shortnote {
     padding: 40px 20px; /* Reduce padding for mobile */
@@ -101,7 +101,7 @@ header {
     max-width: 100%;
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 20px; /* Add space between the image and content */
-    border-radius: 0; /* Remove border-radius for a cleaner look on mobile */
+    border-radius: 10; /* Remove border-radius for a cleaner look on mobile */
   }
 
   #shortnote .left {
@@ -125,6 +125,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
+  border-radius: 10;
 }
 
 /* Individual parallax images */
@@ -150,7 +151,7 @@ header {
 }
 
 /* Responsive adjustments for mobile */
-@media (max-width: 567px) {
+@media (max-width: 570px) {
   #parallax {
     height: auto; /* Adjust height to auto to avoid excessive scrolling */
     padding: 0 20px; /* Reduce padding for mobile */
@@ -205,7 +206,7 @@ header {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds subtle shadow for better readability */
 }
 
-@media (max-width: 567px) {
+@media (max-width: 570px) {
   #new-section {
     padding: 40px 20px; /* Adjust padding for mobile */
   }
@@ -255,7 +256,7 @@ audio {
 }
 
 /* Responsive adjustments for mobile */
-@media (max-width: 567px) {
+@media (max-width: 570px) {
   #audio-player {
     padding: 40px 20px; /* Adjust padding for mobile */
   }
@@ -365,7 +366,7 @@ audio {
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 570px) {
   /* Adjust the font size and spacing for the download section text */
   .download-section p {
     font-size: 1.5rem; /* Reduce font size for mobile */
@@ -470,7 +471,7 @@ audio {
 }
 
 /* Responsive adjustments for mobile */
-@media (max-width: 567px) {
+@media (max-width: 570px) {
   .document-content {
     flex-direction: column;
     align-items: center;
